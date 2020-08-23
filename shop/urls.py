@@ -38,4 +38,4 @@ urlpatterns = [
 ]
 
 
-hello(repeat= Task.DAILY,repeat_until=None, priority = 8)
+hello(repeat= Task.HOURLY ,repeat_until=None, priority = 8)

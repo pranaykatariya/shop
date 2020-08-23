@@ -3,16 +3,21 @@ from __future__ import unicode_literals
 from django.shortcuts import render,HttpResponse
 from background_task import background
 from background_task.models import Task
+from .models import *
 import time
 # Create your views here.
 
-@background(Task.DAILY)
+@background(schedule=0)
 def hello():
-	print("Hello World! " +str(time.time()))
+    test = Test(message='a')
+    test.save()
+    print("Hello World!")
+    print(str(time.time()))
 
 def background_view(request):
-	hello()
-	return HttpResponse("Hello world !")
+    test = Test(message='a')
+    test.save()
+    return HttpResponse("Hello world !")
 
 
 def home(request):

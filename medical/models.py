@@ -1,7 +1,10 @@
 from django.db import models
 
 # Create your models here.
-
+class Test(models.Model):
+    row_id = models.AutoField(primary_key=True)
+    message = models.CharField(max_length=64)
+    time_now = models.DateTimeField(auto_now_add=True)
 
 class Message(models.Model):
     name = models.CharField(max_length=64)
