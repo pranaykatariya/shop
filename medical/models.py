@@ -19,7 +19,7 @@ class WhatsappCustomer(models.Model):
     birthdate = models.DateField(null=True, blank=True)
     gender = models.CharField(max_length=12, null=True, blank=True)
     email = models.EmailField(null=True, blank=True)
-    mobile = models.CharField(max_length=64,null=True, blank=True) 
+    mobile = models.CharField(max_length=64) 
 
 class RegularPatient(models.Model):
     # Compulsory
