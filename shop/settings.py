@@ -147,3 +147,15 @@ STATIC_URL = '/static/'
 # else:
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+
+#Email sending
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#AWS_ACCESS_KEY_ID = 'AKIA324XIGTSQJPFWV3P'
+#AWS_SECRET_ACCESS_KEY ='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'
+EMAIL_HOST = 'email-smtp.us-east-1.amazonaws.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'AKIA324XIGTSYJAKRQ5I'
+EMAIL_HOST_PASSWORD = 'BI+IRAirSgLkNIMgqNqkZBMwt7JJTcrVJYUT1XdCNt4+'
+EMAIL_USE_TLS = True

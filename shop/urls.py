@@ -23,6 +23,7 @@ urlpatterns = [
 
     path('', home, name='home'),
     path('background', background_view, name='background_view'),
+    path('check', regularPatientReports, name='regularPatientReports'),
     path('shop', shop, name='shop'),
     path('about', about, name='about'),
     path('cart', cart, name='cart'),
