@@ -15,7 +15,7 @@ class Message(models.Model):
 class WhatsappCustomer(models.Model):
     cus_id = models.AutoField(primary_key=True)
     firstName = models.CharField(max_length=64)
-    lastName = models.CharField(max_length=64,null=True, blank=True)
+    lastName = models.CharField(max_length=64)
     birthdate = models.DateField(null=True, blank=True)
     gender = models.CharField(max_length=12, null=True, blank=True)
     email = models.EmailField(null=True, blank=True)
