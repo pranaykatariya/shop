@@ -45,9 +45,9 @@ class RegularPatient(models.Model):
 class Product(models.Model):
     product_id = models.AutoField(primary_key=True)
     product_name = models.CharField(max_length=512)
-    company_name = models.CharField(max_length=512)
+    company_name = models.CharField(max_length=512, blank=True, null=True)
     mrp = models.IntegerField() 
     wholesale = models.IntegerField() 
     margin = models.FloatField()
-    agency_name = models.CharField(max_length=512)
+    agency_name = models.CharField(max_length=512, blank=True, null=True)
     purchase_date = models.DateField()
