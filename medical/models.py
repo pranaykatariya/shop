@@ -64,10 +64,10 @@ class Product(models.Model):
         string = ""
         
         if self.product_id:
-            string = "https://project-shop.herokuapp.com/products"+ str( self.product_id )
+            string = "https://project-shop.herokuapp.com/products/"+ str( self.product_id )
         else:
             list = Product.objects.last()
-            string = "https://project-shop.herokuapp.com/products"+ str( list.product_id + 1 )
+            string = "https://project-shop.herokuapp.com/products/"+ str( list.product_id + 1 )
 
         self.qr_code = string
         super(Product, self).save(*args, **kwargs) 
