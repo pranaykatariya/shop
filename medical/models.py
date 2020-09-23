@@ -15,7 +15,7 @@ class Message(models.Model):
 class WhatsappCustomer(models.Model):
     cus_id = models.AutoField(primary_key=True)
     firstName = models.CharField(max_length=64)
-    lastName = models.CharField(max_length=64)
+    lastName = models.CharField(max_length=64   )
     birthdate = models.DateField(null=True, blank=True)
     gender = models.CharField(max_length=12, null=True, blank=True)
     email = models.EmailField(null=True, blank=True)
@@ -39,4 +39,15 @@ class RegularPatient(models.Model):
     repeat_schedule = models.IntegerField()
     alert = models.BooleanField(default=False, blank=True, null=True)
     time_now = models.DateTimeField(auto_now_add=True)
+    purchase_date = models.DateTimeField()
+
+
+class Product(models.Model):
+    product_id = models.AutoField(primary_key=True)
+    product_name = models.CharField(max_length=512)
+    company_name = models.CharField(max_length=512)
+    mrp = models.IntegerField() 
+    wholesale = models.IntegerField() 
+    margin = models.FloatField()
+    agency_name = models.CharField(max_length=512)
     purchase_date = models.DateTimeField()

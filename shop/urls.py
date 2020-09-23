@@ -34,6 +34,8 @@ urlpatterns = [
 
     path('regularpatients', regPatients, name='regPatients'),
 
+    
+
 
     path('admin/', admin.site.urls),
 ]

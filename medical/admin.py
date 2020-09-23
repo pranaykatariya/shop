@@ -18,8 +18,15 @@ class WhatsappCustomerAdmin(admin.ModelAdmin):
     list_filter = ('gender',)
     search_fields = ('firstName', 'lastName', 'mobile', )
 
+
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('product_id', 'product_name', 'company_name', 'mrp', 'wholesale','margin', 'agency_name', 'purchase_date') 
+    list_filter = ('company_name','agency_name', 'purchase_date')
+    search_fields = ('product_name', 'company_name', 'mrp', 'agency_name')
+
 admin.site.register(Message)
 admin.site.register(Test, TestAdmin)
 admin.site.register(RegularPatient, RegularPatientAdmin)
+admin.site.register(Product, ProductAdmin)
 
 admin.site.register(WhatsappCustomer, WhatsappCustomerAdmin)
