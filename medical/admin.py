@@ -20,7 +20,7 @@ class WhatsappCustomerAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('product_id', 'product_name', 'company_name', 'mrp', 'wholesale','margin', 'agency_name', 'purchase_date') 
+    list_display = ('product_id', 'product_name', 'company_name', 'mrp', 'wholesale_rate','margin', 'agency_name', 'purchase_date') 
     list_filter = ('company_name','agency_name', 'purchase_date')
     search_fields = ('product_name', 'company_name', 'mrp', 'agency_name')
 

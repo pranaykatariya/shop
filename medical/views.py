@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,get_object_or_404
 from background_task import background
 from background_task.models import Task
 from datetime import datetime
@@ -107,3 +107,17 @@ def regPatients(request):
         pass
     else:
         return render(request, 'regularpatient.html') 
+
+def qrcodes(request, id):
+    data = get_object_or_404(Product , product_id = id)
+    
+
+    # encode_data = data.product_name + ";M"+str(data.mrp)+";W"+str(data.wholesale_rate)+";Com"+data.company_name+";Ag "+data.agency_name+";Date"+str(data.purchase_date) 
+
+    encode_data = data.product_name + " M "+str(data.mrp)+" W "+str(data.wholesale_rate)+" Com "+data.company_name
+
+    ctx ={
+       'data' : data,
+       'encode_data': encode_data,
+    }
+    return render(request, 'qrcodes.html', ctx)

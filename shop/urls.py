@@ -34,6 +34,7 @@ urlpatterns = [
 
     path('regularpatients', regPatients, name='regPatients'),
 
+    path('products/<str:id>', qrcodes, name='qrcodes'),
     
 
 
