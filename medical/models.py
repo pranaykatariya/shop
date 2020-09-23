@@ -50,4 +50,4 @@ class Product(models.Model):
     wholesale = models.IntegerField() 
     margin = models.FloatField()
     agency_name = models.CharField(max_length=512)
-    purchase_date = models.DateTimeField()
+    purchase_date = models.DateField()
