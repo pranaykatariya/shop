@@ -121,3 +121,6 @@ def qrcodes(request, id):
        'encode_data': encode_data,
     }
     return render(request, 'qrcodes.html', ctx)
+
+def qrscanner(request):
+    return render(request, 'qrscanner.html') 
